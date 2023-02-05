@@ -18,6 +18,9 @@
       .selectTitle {
         position: relative;
         @include h4Heading;
+        span {
+          margin-right: 15px;
+        }
       }
       .selectBody {
         @include paragraph;
