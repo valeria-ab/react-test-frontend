@@ -1,0 +1,103 @@
+@import "../styles/fontsMixins.scss";
+
+.carCard {
+  width: 445px;
+  height: 498px;
+  margin-bottom: 70px;
+
+  .photoBlock_carUnavailable {
+    position: relative;
+    width: 445px;
+    height: 310px;
+    opacity: 0.3;
+    border: 2px solid #c3c1c1;
+    border-radius: 15px 15px 0px 0px;
+    display: flex;
+    align-items: center;
+    &_message {
+      @include h3Heading;
+      position: absolute;
+    
+      width: 237px;
+      height: 59px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 100000000;
+      background-color: black;
+      color: white;
+    }
+  }
+ 
+  .autoLayout {
+    margin-top: 25px;
+    width: 434px;
+    height: 162px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3 {
+      padding: 0;
+      margin: 0;
+    }
+    .title {
+      @include h3Heading;
+    }
+    .description {
+      @include paragraph;
+      color: #595959;
+    }
+    .price {
+      @include h4Heading;
+    }
+    .buy_addToFavs_block {
+      width: 306px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      button {
+        border: none;
+      }
+      .heartIcon_available {
+        cursor: pointer;
+      }
+      .heartIcon_notAvailable {
+        cursor: auto;
+      }
+      .buyButton {
+        @include h4Heading;
+        margin-right: 25px;
+        width: 254px;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 19px 99px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .available {
+        background: #4f2cd9;
+        color: white;
+      }
+      .notAvailable {
+        background: #d9d9d9;
+        color: black;
+        cursor: auto;
+      }
+    }
+  }
+}
+.photoBlock {
+  width: 445px;
+  height: 310px;
+  border: 2px solid #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px 15px 0px 0px;
+  img {
+    max-width: 445px;
+    max-height: 310px;
+  }
+}

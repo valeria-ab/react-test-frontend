@@ -1,0 +1,40 @@
+@import "../styles/fontsMixins.scss";
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100wv;
+  &_container {
+    width: 90%;
+    margin: 0 auto;
+    .sortBlock {
+      width: 90%;
+      margin: 0 auto;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      .selectTitle {
+        position: relative;
+        @include h4Heading;
+      }
+      .selectBody {
+        @include paragraph;
+        position: absolute;
+        height: 154px;
+        width: 206px;
+        background-color: white;
+        z-index: 10;
+        border: 1px solid;
+      }
+    }
+  }
+}
+.option {
+  cursor: pointer;
+  &:hover {
+    color: white;
+    background-color: #1e8fff;
+  }
+}

@@ -1,0 +1,60 @@
+@import "../styles/fontsMixins.scss";
+
+.savedCarCard {
+  margin-bottom: 50px;
+  padding-top: 25px;
+  display: flex;
+  height: 310px;
+  border-top: 1px solid #D9D9D9;
+  .autoLayout {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+    .title {
+      @include h2Heading;
+    }
+    .description {
+      @include paragraph;
+      color: #595959;
+    }
+    .price {
+      @include h4Heading;
+    }
+    .buy_addToFavs_block {
+      width: 306px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      button {
+        border: none;
+      }
+
+      .buyButton {
+        @include h4Heading;
+        margin-right: 25px;
+        width: 259px;
+        height: 56px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        cursor: pointer;
+        background: #4f2cd9;
+        color: white;
+      }
+      .deleteButton {
+        cursor: pointer;
+      }
+      .notAvailable {
+        background: #d9d9d9;
+        color: black;
+        cursor: auto;
+      }
+    }
+  }
+}

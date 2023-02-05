@@ -1,0 +1,15 @@
+@import "../styles/fontsMixins.scss";
+
+.favorites {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100wv;
+  &_container {
+    width: 90%;
+    margin: 0 auto 100px;
+    &_title {
+      @include h1Heading;
+      margin: 45px 0 25px 0;
+    }
+  }
+}
