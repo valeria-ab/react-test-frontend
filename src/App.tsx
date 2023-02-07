@@ -1,11 +1,10 @@
 import { Global } from "@emotion/react";
 import { FC } from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-import Cars from "./pages/Cars/catalog/Cars";
 import Header from "./Header";
-import { GLOBAL_STYLES } from "./styles/global.styles";
 import Catalog from "./pages/Cars/catalog/Catalog";
 import Favorites from "./pages/Cars/favorites/Favorites";
+import { GLOBAL_STYLES } from "./styles/global.styles";
 
 const App: FC = () => {
   return (

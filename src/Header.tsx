@@ -1,5 +1,5 @@
 import { FC, useEffect } from "react";
-import styles from "./Header.module.scss";
+import styles from "./styles/Header.module.scss";
 import burger from "./assets/Burger.png";
 import saved from "./assets/Saved.png";
 import { NavLink } from "react-router-dom";

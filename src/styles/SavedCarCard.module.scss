@@ -23,9 +23,10 @@
       color: #595959;
     }
     .price {
-      @include h4Heading;
+      @include h3Heading;
     }
-    .buy_addToFavs_block {
+    .buttons_block {
+      margin-top: 10px;
       width: 306px;
       height: 56px;
       display: flex;

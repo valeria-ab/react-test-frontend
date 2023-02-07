@@ -1,12 +1,11 @@
 import { FC } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { Car } from "../../../graphql/generated";
 import { IAppStore } from "../../../store/store";
 import style from "../../../styles/Favorites.module.scss";
 import SavedCarCard from "./SavedCarCard";
 
 const Favorites: FC = () => {
-  const dispatch = useDispatch();
   const favoriteCars = useSelector<IAppStore, Car[]>(
     ({ favorites }) => favorites.favoriteCars
   );

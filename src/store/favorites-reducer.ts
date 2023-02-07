@@ -1,31 +1,25 @@
 import type { Car } from "../graphql/generated";
-import {  IAppStore } from "./store";
-
-
 
 export type InitialFavoritesStateType = {
-favoriteCars: Car[]
+  favoriteCars: Car[];
 };
 
 export const addCar = (car: Car) =>
   ({
     type: "FAVORITES/ADD_CAR",
-   car
+    car,
   } as const);
 
-  export const removeCar = (id: number) =>
+export const removeCar = (id: number) =>
   ({
     type: "FAVORITES/REMOVE_CAR",
-  id
+    id,
   } as const);
 
-type ActionsType =
-  | ReturnType<typeof addCar>
-  | ReturnType<typeof removeCar>
-
+type ActionsType = ReturnType<typeof addCar> | ReturnType<typeof removeCar>;
 
 const initialState: InitialFavoritesStateType = {
-  favoriteCars: [] as Car[]
+  favoriteCars: [] as Car[],
 };
 
 export const favoritesReducer = (
@@ -34,14 +28,14 @@ export const favoritesReducer = (
 ): InitialFavoritesStateType => {
   switch (action.type) {
     case "FAVORITES/ADD_CAR":
-    return {...state, favoriteCars: [...state.favoriteCars,  action.car]}
+      return { ...state, favoriteCars: [...state.favoriteCars, action.car] };
     case "FAVORITES/REMOVE_CAR":
-      return {...state, favoriteCars: state.favoriteCars.filter(car => car.id !== action.id)}
-  
+      return {
+        ...state,
+        favoriteCars: state.favoriteCars.filter((car) => car.id !== action.id),
+      };
+
     default:
       return state;
   }
 };
-
-
-

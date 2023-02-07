@@ -8,6 +8,7 @@ import style from "../../../styles/CarCard.module.scss";
 import defaultEmpty from "./../../../assets/DefaultEmpty.png";
 import saved from "./../../../assets/Saved.png";
 import saveUnavailable from "./../../../assets/SaveUnavailable.png";
+import { CarCardPhotoBlock } from "./CarCardPhotoBlock";
 
 const cx = classNames.bind(style);
 
@@ -78,24 +79,3 @@ const CarCard: FC<{ car: Car }> = (
 
 export default CarCard;
 
-export const CarCardPhotoBlock: FC<{
-  availability: boolean;
-  brand: string;
-  model: string;
-  img_src: string;
-}> = ({ availability, brand, model, img_src }) => {
-  return (
-    <div
-      className={cx("photoBlock", {
-        photoBlock_carUnavailable: !availability,
-      })}
-    >
-      <img src={img_src ?? undefined} alt={`${brand} ${model}`} />
-      {!availability && (
-        <div className={cx("photoBlock_carUnavailable_message")}>
-          Нет в наличии
-        </div>
-      )}
-    </div>
-  );
-};
